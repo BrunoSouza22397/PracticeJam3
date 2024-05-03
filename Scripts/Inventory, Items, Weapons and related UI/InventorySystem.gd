@@ -1,11 +1,12 @@
 extends Node
-class_name InventorySystem
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var margin = 10 
+
+	var hbox_container = get_node("HBoxContainer (Main Container)")
+
+	var weapon_container = hbox_container.get_node("HBoxContainer (Main Container)/VBoxContainer (Weapon)")
+	var potion_container = hbox_container.get_node("HBoxContainer (Main Container)/VBoxContainer (Potion)")
+	var coin_container = hbox_container.get_node("HBoxContainer (Main Container)/VBoxContainer (Coins)")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
