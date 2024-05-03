@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Hazards/spike.gd" id="1_sruif"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpfha"]
-size = Vector2(16, 16)
+size = Vector2(15, 15)
 
 [node name="Spike" type="Area2D"]
 collision_layer = 16
@@ -22,5 +22,8 @@ frame = 8
 
 [node name="DamageTimer" type="Timer" parent="."]
 wait_time = 0.25
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [connection signal="timeout" from="DamageTimer" to="." method="_on_damage_timer_timeout"]
